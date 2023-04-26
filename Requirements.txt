@@ -1,4 +1,5 @@
 The Python code above defines four functions and uses several built-in Python functions. 
+The above code does not use any external libraries. However, it does use Python's built-in threading module to create and manage threads.
 Here is a brief description of each function:
 
 1) map_fn(chunk): This function takes in a chunk of the input data as input and produces a list of key-value pairs, 
@@ -15,3 +16,5 @@ counts of each word.
 
 4)The main function does not have a specific name, but it divides the input data into chunks and creates multiple threads to simulate the MapReduce framework. 
 It also combines the results from the Reduce functions to obtain the final output.
+
+In addition to these functions, the code uses several built-in Python functions, such as open (to read the input data from a file), len (to determine the size of each chunk), range (to create a range of integers), and print (to display the final output). It also uses the threading.Thread function to create and manage threads, and the hash function to compute the hash of each key in the partition function.
