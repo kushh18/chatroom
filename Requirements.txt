@@ -1,0 +1,17 @@
+The Python code above defines four functions and uses several built-in Python functions. 
+Here is a brief description of each function:
+
+1) map_fn(chunk): This function takes in a chunk of the input data as input and produces a list of key-value pairs, 
+where the key is a word and the value is 1. It iterates over the words in the input chunk, and if the word is not already in a dictionary, 
+it adds the word to the dictionary with a value of 1. If the word is already in the dictionary, it increments the value by 1.
+
+2)partition_fn(key_value_pairs, num_partitions): This function takes in a list of key-value pairs and the number of partitions as input, 
+and returns a list of partitions, where each partition is a list of key-value pairs. It uses the built-in hash function to compute the hash 
+of each key and assigns it to a partition based on the modulo of the hash value with the number of partitions.
+
+3)reduce_fn(partition): This function takes in a partition as input and produces a list of key-value pairs, where the key is a word and the value 
+is the count of the word across all the input data. It iterates over the key-value pairs in the partition and uses a dictionary to accumulate the 
+counts of each word.
+
+4)The main function does not have a specific name, but it divides the input data into chunks and creates multiple threads to simulate the MapReduce framework. 
+It also combines the results from the Reduce functions to obtain the final output.
